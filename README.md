@@ -14,7 +14,7 @@ Things you may want to cover:
 |email|string|null: false|
 ### Association
 - has_many :messages
-- has_many :groups
+- has_many :users_groups
 - has_many :groups,  through:  :users_groups
 
 ## messagesテーブル
