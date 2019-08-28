@@ -6,35 +6,75 @@
         .side-header
             .side-header__box
                 %p.side-header__box__user-name
-                    名前
+                    名前名前名前名前
                     .side-header__box__menu__new-group
                         %ul.side-header__box__menu
                             %li.side-header__box__menu__new-group
-                                %i.fa-edit
+                                %i.fa.fa-edit
                             %li.side-header__box__menu__edit-user
-                                %i.fa-edit
+                                %i.fa.fa-cog
         
         .groups
             .group
                 %p.group__group-name
                     グループ１
                 %p.group__latest-message
-                    コメント１
+                    メッセージ１
             .group
                 %p.group__group-name
                     グループ２
                 %p.group__latest-message
-                    コメント２
+                    メッセージ２
             .group
                 %p.group__group-name
                     グループ３
                 %p.group__latest-message
-                    コメント３                   
+                    メッセージ３                   
             .group
                 %p.group__group-name
                     グループ４
                 %p.group__latest-message
-                    コメント４
+                    メッセージ４
+            .group
+                %p.group__group-name
+                    グループ５
+                %p.group__latest-message
+                    メッセージ５
+            .group
+                %p.group__group-name
+                    グループ６
+                %p.group__latest-message
+                    メッセージ６
+            .group
+                %p.group__group-name
+                    グループ７
+                %p.group__latest-message
+                    メッセージ７                  
+            .group
+                %p.group__group-name
+                    グループ８
+                %p.group__latest-message
+                    メッセージ８
+            .group
+                %p.group__group-name
+                    グループ９
+                %p.group__latest-message
+                    メッセージ９
+            .group
+                %p.group__group-name
+                    グループ１０
+                %p.group__latest-message
+                    メッセージ１０
+            .group
+                %p.group__group-name
+                    グループ１１
+                %p.group__latest-message
+                    メッセージ１１                  
+            .group
+                %p.group__group-name
+                    グループ１２
+                %p.group__latest-message
+                    メッセージ１２
 
     .chat-main
         .main-header
@@ -42,14 +82,117 @@
                 %h2.main-header-__left-box__current-group
                     グループ１
                 %ul.main-header-__left-box__member-list
+                    Member：
+                    %li.main-header-__left-box__member-list__member
+                        メッセンジャー０
+            .main-header__right-box
+                %input.submit-btn(placeholder="Edit")
+
         .messages
             .message
                 .message__upper-info
                     %p.message__upper-info__talker
                         メッセンジャー１
                     %p.message__upper-info__date
-                        日付
+                        日付１
                 %p.message__text
                     メッセージ１
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー２
+                    %p.message__upper-info__date
+                        日付２
+                %p.message__text
+                    メッセージ２
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー１
+                    %p.message__upper-info__date
+                        日付１
+                %p.message__text
+                    メッセージ１
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー２
+                    %p.message__upper-info__date
+                        日付２
+                %p.message__text
+                    メッセージ２
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー１
+                    %p.message__upper-info__date
+                        日付１
+                %p.message__text
+                    メッセージ１
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー２
+                    %p.message__upper-info__date
+                        日付２
+                %p.message__text
+                    メッセージ２
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー１
+                    %p.message__upper-info__date
+                        日付１
+                %p.message__text
+                    メッセージ１
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー２
+                    %p.message__upper-info__date
+                        日付２
+                %p.message__text
+                    メッセージ２
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー１
+                    %p.message__upper-info__date
+                        日付１
+                %p.message__text
+                    メッセージ１
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー２
+                    %p.message__upper-info__date
+                        日付２
+                %p.message__text
+                    メッセージ２
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー１
+                    %p.message__upper-info__date
+                        日付１
+                %p.message__text
+                    メッセージ１
+            .message
+                .message__upper-info
+                    %p.message__upper-info__talker
+                        メッセンジャー２
+                    %p.message__upper-info__date
+                        日付２
+                %p.message__text
+                    メッセージ２
+        .form
+            %form.new_message#new_message
+                .input-box
+                    %input.input-box__text(placeholder="type a message")
+                        %label.input-box__image
+                            %i.fa.fa-image
+                    %input.submit-btn(placeholder="Send")
+
+
 
         
