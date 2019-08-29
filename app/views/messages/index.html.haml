@@ -192,8 +192,9 @@
             %form.new_message#new_message
                 .input-box
                     %input.input-box__text(placeholder="type a message")
-                        %label.input-box__image.fa.fa-image.fa-20x
-                            =link_to '',class: "image"
-                        %span<>
-            %button.submit#send
+                        %label.upload-label{ for:'upload-icon' }
+                            %input{ type:'file', id:'upload-icon' }
+                                %i.fa.fa-image
+                            %span<>
+            %button.submit#send(type="file")
                 Send

@@ -200,8 +200,10 @@ ul{
               border-style: none;
 
           }
-
-          .input-box__image {
+          #upload-icon{
+            display: none;
+          }
+          .fa.fa-image{
             background-color: white;
             position: absolute;
             font-size: 1.3rem;
@@ -210,7 +212,6 @@ ul{
             cursor: pointer;
           }
         }
-        
       }
       .submit#send{
         float: right;
