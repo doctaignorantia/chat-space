@@ -28,7 +28,6 @@ h2{
 li {
   display: inline;
   list-style: none;
-  text-align: -webkit-match-parent;
   margin-left: 0.3rem;
 }
 
@@ -38,6 +37,14 @@ ul{
   margin-block-start: 0px;
   margin-block-end: 0px;
   padding-inline-start: 40px;
+}
+
+.fa {
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
 }
 
 .wrapper{
@@ -61,15 +68,16 @@ ul{
         font-weight: bold;
         font-size: 16px;
 
-        .side-header__box__menu{
+        .side-header__box__user-name{
+          width: 175px;
           
-          .side-header__box__user-name{
-              margin: 0 0 0 auto;
-            .fa {
-              display: inline-block;
-              font-size: inherit;
-              text-rendering: auto;
-              -webkit-font-smoothing: antialiased;
+          .side-header__box__menu{
+
+            .side-header__box__menu__new-group{
+
+            }
+            .side-header__box__menu__edit-user{
+
             }
           }  
         }
@@ -102,7 +110,6 @@ ul{
 
     .main-header{
       height: 100px;
-      padding: 0 40px;
       display: flex;
       justify-content: space-between;
       border-bottom: solid 1px #eeeeee;
@@ -111,6 +118,7 @@ ul{
         margin-top: 35px;
 
         .main-header-__left-box__current-group{
+          padding: 0 40px;
           font-size: 20px;
           color: #333333;
           margin-bottom: 15px;
@@ -123,20 +131,17 @@ ul{
         }
       }
       .main-header__right-box{
-        float: right;
-        margin: auto 0;
-
-
-        .submit-btn{
-          width: 73px;
-          height: 40px;
-          padding: 0px 20px;
-          margin-left: 28px;
-          border: solid 1px #38aef0;
-          color: #38aef0;
-          font-size: 16px;
-          cursor: pointer;
-        }
+        width: 73px;
+        height: 40px;
+        margin:30px 40px 20px;
+        border: solid 1px #38aef0;
+        color: #38aef0;
+        line-height: 40px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+      
       }
     }
     .messages{
@@ -176,64 +181,50 @@ ul{
       height: 90px;
       padding: 20px 40px;
       background-color: #ddd;
+      display: flex;
 
       form{
-        display: flex;
-        text-align: center;
 
         .input-box{
+          float: left;
           position: relative;
+          height: 100%;
           width: 100%;
-
+          
           .input-box__text{
               height: 50px;
-              width: calc(100% - 145px);
+              width: calc(100vw - 495px);
               padding: 0 40px 0 10px;
               font-size: 16px;
               color: #434a54;
               border-style: none;
 
-
-            .input-box__image {
-              font-size: 1.3rem;
-              position: absolute;
-              top: 10px;
-              right: 10px;
-              cursor: pointer;
-            }
           }
 
-          .submit-btn{
-            float: right;
-            width: 100px;
-            height: 50px;
-            padding: 0 30px;
-            margin-left: 15px;
-            background-color: #38aef0;
-            font-size: 16px;
-            color: white;
-            border: none;
+          .input-box__image {
+            background-color: white;
+            position: absolute;
+            font-size: 1.3rem;
+            top: 16px;
+            right:10px;
             cursor: pointer;
           }
         }
+        
       }
+      .submit#send{
+        float: right;
+        width: 100px;
+        height: 50px;
+        padding: 0 30px;
+        margin-left: 15px;
+        background-color: #38aef0;
+        color: white;
+        line-height: 50px;
+        font-size: 18px;
+        text-align: center;
+        cursor: pointer;
+      }  
     }
   }
-}
-
-input{
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  text-align: start;
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  font: 400 11px system-ui;
 }
