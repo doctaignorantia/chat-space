@@ -2,6 +2,9 @@
 @import "font-awesome";
 @import "./variable.scss";
 @import "./index";
+@import "modules/user";
+@import "config/colors";
+@import "modules/flash";
 
 * {
   box-sizing: border-box;
