@@ -19,15 +19,8 @@
                 Edit
 
         .messages
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー１
-                    %p.message__upper-info__date
-                        日付１
-                %p.message__text
-                    メッセージ１
- 
+            = render partial: 'message', collection: @messages
+
         .form
             %form.new_message#new_message
                 .input-box
