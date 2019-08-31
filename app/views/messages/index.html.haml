@@ -1,82 +1,9 @@
-.flushbox
-    グループを作成しました
+-# .flushbox
+-#     グループを作成しました
 
 .wrapper
-    .chat-side
-        .side-header
-            .side-header__box
-                %p.side-header__box__user-name
-                    名前名前名前名前
-                    %ul.side-header__box__menu
-                        %li.side-header__box__menu__new-group
-                            =link_to '',class: "group_new"
-                            %i.fa.fa-edit
-                            %span<>
-                        %li.side-header__box__menu__edit-user
-                            %i.fa.fa-cog
-                            =link_to '',class: "group_edit"
-                            %span<>
-        .groups
-            .group
-                %p.group__group-name
-                    グループ１
-                %p.group__latest-message
-                    メッセージ１
-            .group
-                %p.group__group-name
-                    グループ２
-                %p.group__latest-message
-                    メッセージ２
-            .group
-                %p.group__group-name
-                    グループ３
-                %p.group__latest-message
-                    メッセージ３                   
-            .group
-                %p.group__group-name
-                    グループ４
-                %p.group__latest-message
-                    メッセージ４
-            .group
-                %p.group__group-name
-                    グループ５
-                %p.group__latest-message
-                    メッセージ５
-            .group
-                %p.group__group-name
-                    グループ６
-                %p.group__latest-message
-                    メッセージ６
-            .group
-                %p.group__group-name
-                    グループ７
-                %p.group__latest-message
-                    メッセージ７                  
-            .group
-                %p.group__group-name
-                    グループ８
-                %p.group__latest-message
-                    メッセージ８
-            .group
-                %p.group__group-name
-                    グループ９
-                %p.group__latest-message
-                    メッセージ９
-            .group
-                %p.group__group-name
-                    グループ１０
-                %p.group__latest-message
-                    メッセージ１０
-            .group
-                %p.group__group-name
-                    グループ１１
-                %p.group__latest-message
-                    メッセージ１１                  
-            .group
-                %p.group__group-name
-                    グループ１２
-                %p.group__latest-message
-                    メッセージ１２
+
+    = render 'shared/side_bar' 
 
     .chat-main
         .main-header
@@ -92,109 +19,13 @@
                 Edit
 
         .messages
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー１
-                    %p.message__upper-info__date
-                        日付１
-                %p.message__text
-                    メッセージ１
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー２
-                    %p.message__upper-info__date
-                        日付２
-                %p.message__text
-                    メッセージ２
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー３
-                    %p.message__upper-info__date
-                        日付３
-                %p.message__text
-                    メッセージ３
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー４
-                    %p.message__upper-info__date
-                        日付４
-                %p.message__text
-                    メッセージ４
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー５
-                    %p.message__upper-info__date
-                        日付５
-                %p.message__text
-                    メッセージ５
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー６
-                    %p.message__upper-info__date
-                        日付６
-                %p.message__text
-                    メッセージ６
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー７
-                    %p.message__upper-info__date
-                        日付７
-                %p.message__text
-                    メッセージ７
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー８
-                    %p.message__upper-info__date
-                        日付８
-                %p.message__text
-                    メッセージ８
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー９
-                    %p.message__upper-info__date
-                        日付９
-                %p.message__text
-                    メッセージ９
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー1０
-                    %p.message__upper-info__date
-                        日付1０
-                %p.message__text
-                    メッセージ1０
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー１１
-                    %p.message__upper-info__date
-                        日付１１
-                %p.message__text
-                    メッセージ１１
-            .message
-                .message__upper-info
-                    %p.message__upper-info__talker
-                        メッセンジャー１２
-                    %p.message__upper-info__date
-                        日付２
-                %p.message__text
-                    メッセージ１２
+            = render partial: 'message', collection: @messages
+
         .form
-            %form.new_message#new_message
-                .input-box
-                    %input.input-box__text(placeholder="type a message")
-                        %label.upload-label{ for:'upload-icon' }
-                            %input{ type:'file', id:'upload-icon' }
-                                %i.fa.fa-image
-                            %span<>
-            %button.submit#send(type="file")
-                Send
+        = form_for [@group, @message] do |f|
+            = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+            .form__mask
+            = f.label :image, class: 'form__mask__image' do
+                = fa_icon 'picture-o', class: 'icon'
+                = f.file_field :image, class: 'hidden'
+            = f.submit 'Send', class: 'form__submit'

@@ -1,7 +1,14 @@
 @import "./reset";
+@import "config/colors";
 @import "font-awesome";
 @import "./variable.scss";
-@import "./index";
+@import "modules/flash";
+@import "modules/user";
+@import "modules/group";
+@import "modules/index";
+@import "modules/side_bar";
+
+
 
 * {
   box-sizing: border-box;
