@@ -14,10 +14,9 @@
             .main-header__right-box
                 .submit-btn#edit
                 Edit
-
-
+ 
         .messages
-            = render partial: 'message', collection: @messages
+            = render partial: 'messages/message', collection: @messages
 
         .form
             %form.new_message#new_message
@@ -27,5 +26,5 @@
                             %input{ type:'file', id:'upload-icon' }
                                 %i.fa.fa-image
                             %span<>
-            %button.submit#send(type="file")
+            %button.form__mask(type="file")
                 Send
