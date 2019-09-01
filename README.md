@@ -14,14 +14,14 @@ Things you may want to cover:
 |email|string|null: false|
 ### Association
 - has_many :messages
-- has_many :users_groups
-- has_many :groups,  through:  :users_groups
+- has_many :group_users
+- has_many :groups, through: :group_users
 
 ## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text||
-|image|text||
+|content|string||
+|image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 ### Association
@@ -34,8 +34,8 @@ Things you may want to cover:
 |name|string|null: false|
 ### Association
 - has_many :messages
-- has_many :users_groups
-- has_many :users,  through:  :users_groups
+- has_many :group_users
+- has_many :users, through: :group_users
 
 ## users_groupsテーブル
 |Column|Type|Options|
