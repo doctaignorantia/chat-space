@@ -1,15 +1,15 @@
 .wrapper
     = render 'shared/side_bar' 
-    .chat-main
-        .main-header
-            .main-header__left-box
-                %h2.main-header__left-box__current-group
-                %ul.main-header__left-box__member-list
+    .chat
+        .header
+            .left-header 
+                %h2.left-header__title
+                %ul.left-header__members
                     Member :
-                    %li.main-header__left-box__member-list__member
+                    %li.member
                         メッセンジャー００
-            .main-header__right-box
-                .submit-btn#edit
+            .right-header
+                .right-header__button
                 Edit
 
         .messages
@@ -19,7 +19,7 @@
         = form_for [@group, @message] do |f|
             = f.text_field :content, class: 'form__message', placeholder: 'type a message'
             .form__mask
+            = f.file_field :image, class: 'hidden'
             = f.label :image, class: 'form__mask__image' do
-                = fa_icon 'picture-o', class: 'icon'
-                = f.file_field :image, class: 'hidden'
+                = fa_icon 'picture-o', class: 'icon'    
             = f.submit 'Send', class: 'form__submit'
