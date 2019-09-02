@@ -1,14 +1,5 @@
 @import "./variable.scss";
 
-.flushbox {
-  background-color: $lb;
-  color: $w;
-  font-size: 1rem;
-  font-weight: lighter;
-  text-align: center;
-  width: 100vw;
-}
-
 p{
   display: block;
   margin-block-start: 1em;
@@ -125,55 +116,54 @@ ul{
       }
     }
 
-    .form{
+
+    form{
       height: 90px;
       padding: 20px 40px;
       background-color: #dddddd;
       display: flex;
-
-      form{
-
-        .input-box{
-          float: left;
-          position: relative;
-          height: 100%;
-          width: 100%;
+        // float: left;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        
+      .form__message{
+          height: 50px;
+          width: calc(100vw - 495px);
+          padding: 0 40px 0 10px;
+          font-size: 16px;
+          color: $dg;
+          border-style: none;
           
-          &__text{
-              height: 50px;
-              width: calc(100vw - 495px);
-              padding: 0 40px 0 10px;
-              font-size: 16px;
-              color: $dg;
-              border-style: none;
 
-          }
-          #upload-icon{
-            display: none;
-          }
-          .fa.fa-image{
-            background-color: $w;
-            position: absolute;
-            font-size: 1.3rem;
-            top: 16px;
-            right:10px;
-            cursor: pointer;
-          }
-        }
       }
-      .submit#send{
-        float: right;
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: $lb;
-        color: $w;
-        line-height: 50px;
-        font-size: 17px;
-        text-align: center;
-        cursor: pointer;
+      .hidden{
+          display: none;
+      }
+      .icon{
+          background-color: $w;
+          position: absolute;
+          font-size: 1.3rem;
+          top: 35px;
+          right:160px;
+          cursor: pointer;
+      }
+    }
+        
+
+      .form__submit{
+ 
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: $lb;
+          color: $w;
+          line-height: 50px;
+          font-size: 17px;
+          text-align: center;
+          cursor: pointer;
       }  
     }
-  }
+  
 }
