@@ -10,7 +10,11 @@
                 %ul.main-header__left-box__member-list
                     Member :
                     %li.main-header__left-box__member-list__member
-                        メッセンジャー０
+                        -# - @group.each do |user|
+                        -#     = link_to group_messages_path(user) do
+                                .group__menber
+                                    -# = user.name
+                                メッセンジャー０
             .main-header__right-box
                 .submit-btn#edit
                 Edit
