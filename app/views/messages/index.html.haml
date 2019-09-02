@@ -11,9 +11,8 @@
                     Member :
                     %li.main-header__left-box__member-list__member
                         - @group.group_users.each do |group_users|
-                            = link_to group_messages_path(group_users) do
-                                .group__menber
-                                = group_users.user.name
+                            .group__menber
+                            = group_users.user.name
 
             .main-header__right-box
                 .submit-btn#edit
