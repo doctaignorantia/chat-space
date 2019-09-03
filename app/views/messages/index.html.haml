@@ -14,9 +14,8 @@
                             = user.name
 
             .main-header__right-box
-                .submit-btn
-                    = link_to edit_group_path(@group) do
-                        Edit
+                = link_to edit_group_path(@group), class: 'submit-btn' do
+                    Edit
                 
 
         .messages
