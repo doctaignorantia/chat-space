@@ -1,13 +1,12 @@
-@import "./reset";
-@import "config/colors";
 @import "font-awesome";
+@import "config/colors";
+@import "config/reset";
 @import "./variable.scss";
 @import "modules/flash";
-@import "modules/user";
 @import "modules/group";
-@import "modules/index";
 @import "modules/side_bar";
-
+@import "modules/index";
+@import "modules/user";
 
 
 * {
