@@ -6,14 +6,17 @@
         .main-header
             .main-header__left-box
                 %h2.main-header__left-box__current-group
-                    グループ１
-                %ul.main-header__left-box__member-list
-                    Member :
-                    %li.main-header__left-box__member-list__member
-                        メッセンジャー０
+                    = @group.name
+                .main-header__left-box__member-list
+                    Member :&nbsp
+                    .main-header__left-box__member-list__member
+                        - @group.users.each do |user|
+                            = user.name
+
             .main-header__right-box
-                .submit-btn#edit
-                Edit
+                = link_to edit_group_path(@group), class: 'submit-btn' do
+                    Edit
+                
 
         .messages
             = render partial: 'message', collection: @messages
