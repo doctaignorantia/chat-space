@@ -1,3 +1,5 @@
+$(document).on('turbolinks:load', function(){
+
 $(function(){
   function buildHTML(message){
     var content = message.content ? `${ message.content }` : "";
@@ -13,7 +15,7 @@ $(function(){
                   </div>
                   <div class="lower-message">
                     <p class="lower-message__content">
-                      ${content}
+                      ${message.content}
                     </p>
                     ${image} 
                   </div>
@@ -39,7 +41,7 @@ $(function(){
       $('.messages').append(html);
       $('form__message').val('');
       $('form')[0].reset();
-      scroll();
+      $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     })
     .fail(function(){
       alert('メッセージを入力してください。');
@@ -48,4 +50,5 @@ $(function(){
       $(".form__submit").removeAttr("disabled");
     });
   });
+});
 });
