@@ -5,7 +5,6 @@ $(document).on('turbolinks:load', function(){
       var content = message.content ? `${ message.content }` : "";
       var image = message.image ? `<img src= ${ message.image }>` : "";
       var html = `
-      
                   <div class="message">
                     <div class="upper-message">
                       <div class="upper-message__user-name">
@@ -41,14 +40,13 @@ $(document).on('turbolinks:load', function(){
       .done(function(data){ 
         var html = buildHTML(data);
         $('.messages').append(html);
-        $('form__message').val('');
         $('form')[0].reset();
         $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
       })
       .fail(function(){
         alert('メッセージを入力してください。');
       })
-      .always(() => {
+      .always(function(){
         $(".form__submit").removeAttr("disabled");
       });
     });
