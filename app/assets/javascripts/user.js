@@ -14,7 +14,6 @@ $(function() {
         </div>  
         </div>`
     search_list.append(html);
-    return html;
   }
 
   function appendMembers(name, user_id) {
@@ -29,7 +28,6 @@ $(function() {
         </div>`  
 
     member_list.append(html);
-    return html;
   }
 
   function appendNoUsers(info) {
