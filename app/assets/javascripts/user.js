@@ -38,45 +38,45 @@ $(document).on('turbolinks:load', function(){
       search_list.append(html);
     }
 
-    // $(function(){
-          //   $('#member_search_result').ready(function() {
+//     $(function(){
+//       $('#member_search_result').ready(function() {
 
-            //     $.ajax({
-            //       type: 'GET',
-            //       url: '/group',
-            //       data: { keyword: input },
-            //       dataType: 'json'
-            //     })
-        
-            //     .done(function(users) {
-            //       $('#member_search_result').empty();
-            //         if (users.length !== 0) {
-            //           users.forEach(function(user){
-            //             appendMembers(name, user_id);
-            //           });
-            //         }
-            //         else {
-            //           appendNoUsers("一致するユーザーはいません");
-            //         }
-            //       })
-            //     .fail(function() {
-            //       alert('ユーザー検索に失敗しました');
-            //     })
-            //   });
-        
-            //   $(function(){
-            //     $(document).on('click', '.user-search-add', function() {
-            //       var name = $(this).data("user-name");
-            //       var user_id = $(this).data("user-id");
-            //       $(this).parent().remove();
-            //       appendMembers(name, user_id);
-            //     });
-        
-            //     $(document).on("click", '.user-search-remove', function() {
-            //       $(this).parent().remove();
-            //     });
-            //   });
-            // });
+//         $.ajax({
+//               type: 'GET',
+//               url: '/group',
+//               data: { keyword: input },
+//               dataType: 'json'
+//         })
+    
+//         .done(function(users) {
+//           $('#member_search_result').empty();
+//             if (users.length !== 0) {
+//                 users.forEach(function(user){
+//                    appendMembers(name, user_id);
+//                 });
+//             }
+//             else {
+//                appendNoUsers("一致するユーザーはいません");
+//             }
+//         })
+//         .fail(function() {
+//            alert('ユーザー検索に失敗しました');
+//         })
+//       });
+    
+//       $(function(){
+//         $(document).on('click', '.user-search-add', function() {
+//            var name = $(this).data("user-name");
+//            var user_id = $(this).data("user-id");
+//            $(this).parent().remove();
+//            appendMembers(name, user_id);
+//         });
+
+//         $(document).on("click", '.user-search-remove', function() {
+//           $(this).parent().remove();
+//         });
+//       });
+//     });
     
 
     $(function(){
