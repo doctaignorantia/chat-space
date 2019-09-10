@@ -21,9 +21,8 @@ $(document).on('turbolinks:load', function(){
           <div id ='member_search_result'>
           <div class='chat-group-user clearfix'>
             <p class='chat-group-user__name'>${ name }</p>
-            <input name='group[user_ids][]' type='hidden' value=${ user_id }>
-            <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除
-            </div>
+              <input name='group[user_ids][]' type='hidden' value=${ user_id }>
+              <div class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</div>
           </div>
           </div>`  
 
@@ -37,46 +36,6 @@ $(document).on('turbolinks:load', function(){
 
       search_list.append(html);
     }
-
-//     $(function(){
-//       $('#member_search_result').ready(function() {
-//         $.ajax({
-//               type: 'GET',
-//               url: 'localhost.chat-space_development/group_users',
-//               data: { user },
-//               dataType: 'json'
-//         })
-    
-//         .done(function(users) {
-//           $('#member_search_result').empty();
-//             if (users.length !== 0) {
-//                 users.forEach(function(user){
-//                    appendMembers(name, user_id);
-//                 });
-//             }
-//             else {
-//                appendNoUsers("一致するユーザーはいません");
-//             }
-//         })
-//         .fail(function() {
-//            alert('ユーザー検索に失敗しました');
-//         })
-//       });
-    
-//       $(function(){
-//         $(document).on('click', '.user-search-add', function() {
-//            var name = $(this).data("user-name");
-//            var user_id = $(this).data("user-id");
-//            $(this).parent().remove();
-//            appendMembers(name, user_id);
-//         });
-
-//         $(document).on("click", '.user-search-remove', function() {
-//           $(this).parent().remove();
-//         });
-//       });
-//     });
-    
 
     $(function(){
       $("#user-search-field").on("keyup", function() {

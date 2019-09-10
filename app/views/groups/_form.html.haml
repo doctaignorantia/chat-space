@@ -29,15 +29,15 @@
   .chat-group-form__field--left
     %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
   .chat-group-form__field--right
-    #member_current
+    #member_search_result
     .chat-group-user.clearfix
       %p.chat-group-user__name
         =current_user.name
-  -group.users.each do |user|        
+  -group.users.each do |user|
+    -next if user == current_user
     .chat-group-form__field.clearfix
     .chat-group-form__field--left
     .chat-group-form__field--right
-      #member_search_result
       .chat-group-user.clearfix
         %p.chat-group-user__name
           =user.name
