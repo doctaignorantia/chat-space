@@ -40,11 +40,10 @@ $(document).on('turbolinks:load', function(){
 
 //     $(function(){
 //       $('#member_search_result').ready(function() {
-
 //         $.ajax({
 //               type: 'GET',
-//               url: '/group',
-//               data: { keyword: input },
+//               url: 'localhost.chat-space_development/group_users',
+//               data: { user },
 //               dataType: 'json'
 //         })
     
